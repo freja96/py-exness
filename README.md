@@ -14,7 +14,7 @@ python main.py
 # Get hello page
 curl localhost:5000/hello
 # Create user
-curl -d '{"name":"Jooo"}' -H "Content-Type: application/json" -X POST http://localhost:5000/user  -i
+curl -d '{"name":"Joe"}' -H "Content-Type: application/json" -X POST http://localhost:5000/user  -i
 
 # If you wanna inser user to DB then you should have this variable in env vars
 export IMPORT_TO_DB=True
