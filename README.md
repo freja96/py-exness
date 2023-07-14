@@ -1,6 +1,6 @@
 # Create virtual environemnt 
-python3 -m venv venv
-source venv/bin/activate
+```python3 -m venv venv
+```source venv/bin/activate
 
 # Install all libs
 pip install -r requirements.txt
@@ -24,4 +24,13 @@ curl localhost:5000/username=Joe
 
 
 
+#### Helm part
+# cd chart and run commond bellow
+helm upgrade -i py-exness py-exness
 
+
+# Service monitor
+in values we have value serviceMonitor
+By default it is false, you can put True to enable it
+
+```helm upgrade -i py-exness py-exness --set serviceMonitor=True```
