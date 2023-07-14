@@ -29,7 +29,7 @@ def add_user():
         
         # export log with user and date to file log.txt
         log = "Name: " + name + ", Time: " + str(date)
-        with open('log.txt', 'a') as file:
+        with open('data/log.txt', 'a') as file:
             file.write(log + '\n')
         print(log)
 
@@ -51,7 +51,7 @@ def add_user():
 ###     эти данные по GET запросу с теми же параметрами (пример: .../user?name=Joe)
 def get_db_connection():
     # Connection to sqlite database
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('data/database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -84,4 +84,5 @@ def put_user(user, date):
     print("User " + user + " was inserted to DB.")
 
 
-app.run()
+app.run( host='0.0.0.0', port=5000 )
+

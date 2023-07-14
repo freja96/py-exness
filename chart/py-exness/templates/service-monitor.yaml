@@ -1,0 +1,14 @@
+{{- if .Values.serviceMonitor }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "py-exness.fullname" . }}
+  labels:
+    {{- include "py-exness.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "py-exness.selectorLabels" . | nindent 4 }}
+  endpoints:
+  - port: http
+{{- end }}
+
