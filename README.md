@@ -1,5 +1,5 @@
-# Create virtual environemnt 
-```python3 -m venv venv```
+```# Create virtual environemnt 
+python3 -m venv venv
 source venv/bin/activate
 
 # Install all libs
@@ -33,4 +33,4 @@ helm upgrade -i py-exness py-exness
 in values we have value serviceMonitor
 By default it is false, you can put True to enable it
 
-```helm upgrade -i py-exness py-exness --set serviceMonitor=True```
+helm upgrade -i py-exness py-exness --set serviceMonitor=True
